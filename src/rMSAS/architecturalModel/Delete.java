@@ -32,7 +32,7 @@ public interface Delete extends AbstractArchitecturalOperation {
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(AbstractStructureElement)
 	 * @see rMSAS.architecturalModel.ArchitecturalModelPackage#getDelete_From()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	AbstractStructureElement getFrom();

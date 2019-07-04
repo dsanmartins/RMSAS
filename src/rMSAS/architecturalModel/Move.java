@@ -33,7 +33,7 @@ public interface Move extends AbstractArchitecturalOperation {
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(AbstractStructureElement)
 	 * @see rMSAS.architecturalModel.ArchitecturalModelPackage#getMove_From()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	AbstractStructureElement getFrom();
@@ -59,7 +59,7 @@ public interface Move extends AbstractArchitecturalOperation {
 	 * @return the value of the '<em>To</em>' reference.
 	 * @see #setTo(AbstractStructureElement)
 	 * @see rMSAS.architecturalModel.ArchitecturalModelPackage#getMove_To()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	AbstractStructureElement getTo();

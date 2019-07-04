@@ -21,16 +21,14 @@
           eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Move" eSuperTypes="#//architecturalModel/AbstractArchitecturalOperation">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1"
-          eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//architecturalModel/AbstractArchitecturalOperation">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="in" lowerBound="1" eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="in" eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//architecturalModel/AbstractArchitecturalOperation">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1"
-          eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="ecore:EClass kdm.ecore#//structure/AbstractStructureElement"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="codeModel" nsURI="http://www.example.org/rMSAS/codeModel" nsPrefix="codeModel">

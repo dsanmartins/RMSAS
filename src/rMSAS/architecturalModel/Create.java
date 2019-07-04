@@ -32,7 +32,7 @@ public interface Create extends AbstractArchitecturalOperation {
 	 * @return the value of the '<em>In</em>' reference.
 	 * @see #setIn(AbstractStructureElement)
 	 * @see rMSAS.architecturalModel.ArchitecturalModelPackage#getCreate_In()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	AbstractStructureElement getIn();
