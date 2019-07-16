@@ -267,13 +267,7 @@ public class SourcePackageImpl extends EPackageImpl implements SourcePackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArchitecturalModelPackage.eNS_URI);
-		ArchitecturalModelPackageImpl theArchitecturalModelPackage = (ArchitecturalModelPackageImpl)(registeredPackage instanceof ArchitecturalModelPackageImpl ? registeredPackage : ArchitecturalModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodeModelPackage.eNS_URI);
-		CodeModelPackageImpl theCodeModelPackage = (CodeModelPackageImpl)(registeredPackage instanceof CodeModelPackageImpl ? registeredPackage : CodeModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
-		ConstraintModelPackageImpl theConstraintModelPackage = (ConstraintModelPackageImpl)(registeredPackage instanceof ConstraintModelPackageImpl ? registeredPackage : ConstraintModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KdmPackage.eNS_URI);
 		KdmPackageImpl theKdmPackage = (KdmPackageImpl)(registeredPackage instanceof KdmPackageImpl ? registeredPackage : KdmPackage.eINSTANCE);
@@ -295,12 +289,15 @@ public class SourcePackageImpl extends EPackageImpl implements SourcePackage {
 		StructurePackageImpl theStructurePackage = (StructurePackageImpl)(registeredPackage instanceof StructurePackageImpl ? registeredPackage : StructurePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(registeredPackage instanceof UiPackageImpl ? registeredPackage : UiPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArchitecturalModelPackage.eNS_URI);
+		ArchitecturalModelPackageImpl theArchitecturalModelPackage = (ArchitecturalModelPackageImpl)(registeredPackage instanceof ArchitecturalModelPackageImpl ? registeredPackage : ArchitecturalModelPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodeModelPackage.eNS_URI);
+		CodeModelPackageImpl theCodeModelPackage = (CodeModelPackageImpl)(registeredPackage instanceof CodeModelPackageImpl ? registeredPackage : CodeModelPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
+		ConstraintModelPackageImpl theConstraintModelPackage = (ConstraintModelPackageImpl)(registeredPackage instanceof ConstraintModelPackageImpl ? registeredPackage : ConstraintModelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theSourcePackage.createPackageContents();
-		theArchitecturalModelPackage.createPackageContents();
-		theCodeModelPackage.createPackageContents();
-		theConstraintModelPackage.createPackageContents();
 		theCorePackage.createPackageContents();
 		theKdmPackage.createPackageContents();
 		theCodePackage.createPackageContents();
@@ -312,12 +309,12 @@ public class SourcePackageImpl extends EPackageImpl implements SourcePackage {
 		theEventPackage.createPackageContents();
 		theStructurePackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theArchitecturalModelPackage.createPackageContents();
+		theCodeModelPackage.createPackageContents();
+		theConstraintModelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSourcePackage.initializePackageContents();
-		theArchitecturalModelPackage.initializePackageContents();
-		theCodeModelPackage.initializePackageContents();
-		theConstraintModelPackage.initializePackageContents();
 		theCorePackage.initializePackageContents();
 		theKdmPackage.initializePackageContents();
 		theCodePackage.initializePackageContents();
@@ -329,6 +326,9 @@ public class SourcePackageImpl extends EPackageImpl implements SourcePackage {
 		theEventPackage.initializePackageContents();
 		theStructurePackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theArchitecturalModelPackage.initializePackageContents();
+		theCodeModelPackage.initializePackageContents();
+		theConstraintModelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theSourcePackage.freeze();

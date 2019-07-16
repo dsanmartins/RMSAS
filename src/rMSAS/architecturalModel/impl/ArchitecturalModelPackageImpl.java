@@ -163,11 +163,7 @@ public class ArchitecturalModelPackageImpl extends EPackageImpl implements Archi
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodeModelPackage.eNS_URI);
-		CodeModelPackageImpl theCodeModelPackage = (CodeModelPackageImpl)(registeredPackage instanceof CodeModelPackageImpl ? registeredPackage : CodeModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
-		ConstraintModelPackageImpl theConstraintModelPackage = (ConstraintModelPackageImpl)(registeredPackage instanceof ConstraintModelPackageImpl ? registeredPackage : ConstraintModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KdmPackage.eNS_URI);
 		KdmPackageImpl theKdmPackage = (KdmPackageImpl)(registeredPackage instanceof KdmPackageImpl ? registeredPackage : KdmPackage.eINSTANCE);
@@ -191,11 +187,13 @@ public class ArchitecturalModelPackageImpl extends EPackageImpl implements Archi
 		StructurePackageImpl theStructurePackage = (StructurePackageImpl)(registeredPackage instanceof StructurePackageImpl ? registeredPackage : StructurePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(registeredPackage instanceof UiPackageImpl ? registeredPackage : UiPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodeModelPackage.eNS_URI);
+		CodeModelPackageImpl theCodeModelPackage = (CodeModelPackageImpl)(registeredPackage instanceof CodeModelPackageImpl ? registeredPackage : CodeModelPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
+		ConstraintModelPackageImpl theConstraintModelPackage = (ConstraintModelPackageImpl)(registeredPackage instanceof ConstraintModelPackageImpl ? registeredPackage : ConstraintModelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theArchitecturalModelPackage.createPackageContents();
-		theCodeModelPackage.createPackageContents();
-		theConstraintModelPackage.createPackageContents();
 		theCorePackage.createPackageContents();
 		theKdmPackage.createPackageContents();
 		theSourcePackage.createPackageContents();
@@ -208,11 +206,11 @@ public class ArchitecturalModelPackageImpl extends EPackageImpl implements Archi
 		theEventPackage.createPackageContents();
 		theStructurePackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theCodeModelPackage.createPackageContents();
+		theConstraintModelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theArchitecturalModelPackage.initializePackageContents();
-		theCodeModelPackage.initializePackageContents();
-		theConstraintModelPackage.initializePackageContents();
 		theCorePackage.initializePackageContents();
 		theKdmPackage.initializePackageContents();
 		theSourcePackage.initializePackageContents();
@@ -225,6 +223,8 @@ public class ArchitecturalModelPackageImpl extends EPackageImpl implements Archi
 		theEventPackage.initializePackageContents();
 		theStructurePackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theCodeModelPackage.initializePackageContents();
+		theConstraintModelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theArchitecturalModelPackage.freeze();

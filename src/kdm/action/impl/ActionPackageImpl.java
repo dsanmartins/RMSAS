@@ -323,13 +323,7 @@ public class ActionPackageImpl extends EPackageImpl implements ActionPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArchitecturalModelPackage.eNS_URI);
-		ArchitecturalModelPackageImpl theArchitecturalModelPackage = (ArchitecturalModelPackageImpl)(registeredPackage instanceof ArchitecturalModelPackageImpl ? registeredPackage : ArchitecturalModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodeModelPackage.eNS_URI);
-		CodeModelPackageImpl theCodeModelPackage = (CodeModelPackageImpl)(registeredPackage instanceof CodeModelPackageImpl ? registeredPackage : CodeModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
-		ConstraintModelPackageImpl theConstraintModelPackage = (ConstraintModelPackageImpl)(registeredPackage instanceof ConstraintModelPackageImpl ? registeredPackage : ConstraintModelPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KdmPackage.eNS_URI);
 		KdmPackageImpl theKdmPackage = (KdmPackageImpl)(registeredPackage instanceof KdmPackageImpl ? registeredPackage : KdmPackage.eINSTANCE);
@@ -351,12 +345,15 @@ public class ActionPackageImpl extends EPackageImpl implements ActionPackage {
 		StructurePackageImpl theStructurePackage = (StructurePackageImpl)(registeredPackage instanceof StructurePackageImpl ? registeredPackage : StructurePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(registeredPackage instanceof UiPackageImpl ? registeredPackage : UiPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArchitecturalModelPackage.eNS_URI);
+		ArchitecturalModelPackageImpl theArchitecturalModelPackage = (ArchitecturalModelPackageImpl)(registeredPackage instanceof ArchitecturalModelPackageImpl ? registeredPackage : ArchitecturalModelPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodeModelPackage.eNS_URI);
+		CodeModelPackageImpl theCodeModelPackage = (CodeModelPackageImpl)(registeredPackage instanceof CodeModelPackageImpl ? registeredPackage : CodeModelPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
+		ConstraintModelPackageImpl theConstraintModelPackage = (ConstraintModelPackageImpl)(registeredPackage instanceof ConstraintModelPackageImpl ? registeredPackage : ConstraintModelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theActionPackage.createPackageContents();
-		theArchitecturalModelPackage.createPackageContents();
-		theCodeModelPackage.createPackageContents();
-		theConstraintModelPackage.createPackageContents();
 		theCorePackage.createPackageContents();
 		theKdmPackage.createPackageContents();
 		theSourcePackage.createPackageContents();
@@ -368,12 +365,12 @@ public class ActionPackageImpl extends EPackageImpl implements ActionPackage {
 		theEventPackage.createPackageContents();
 		theStructurePackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theArchitecturalModelPackage.createPackageContents();
+		theCodeModelPackage.createPackageContents();
+		theConstraintModelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theActionPackage.initializePackageContents();
-		theArchitecturalModelPackage.initializePackageContents();
-		theCodeModelPackage.initializePackageContents();
-		theConstraintModelPackage.initializePackageContents();
 		theCorePackage.initializePackageContents();
 		theKdmPackage.initializePackageContents();
 		theSourcePackage.initializePackageContents();
@@ -385,6 +382,9 @@ public class ActionPackageImpl extends EPackageImpl implements ActionPackage {
 		theEventPackage.initializePackageContents();
 		theStructurePackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theArchitecturalModelPackage.initializePackageContents();
+		theCodeModelPackage.initializePackageContents();
+		theConstraintModelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theActionPackage.freeze();
