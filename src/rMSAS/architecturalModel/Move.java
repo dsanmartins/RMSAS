@@ -2,7 +2,7 @@
  */
 package rMSAS.architecturalModel;
 
-import kdm.structure.AbstractStructureElement;
+import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
 
 /**
  * <!-- begin-user-doc -->

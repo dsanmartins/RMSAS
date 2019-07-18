@@ -2,14 +2,14 @@
  */
 package rMSAS.codeModel.impl;
 
-import kdm.core.KDMEntity;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 import rMSAS.codeModel.CodeModelPackage;
 import rMSAS.codeModel.Create;
@@ -36,7 +36,7 @@ public class CreateImpl extends AbstractCodeOperationImpl implements Create {
 	 * @generated
 	 * @ordered
 	 */
-	protected KDMEntity in;
+	protected AbstractCodeElement in;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,10 +63,10 @@ public class CreateImpl extends AbstractCodeOperationImpl implements Create {
 	 * @generated
 	 */
 	@Override
-	public KDMEntity getIn() {
+	public AbstractCodeElement getIn() {
 		if (in != null && in.eIsProxy()) {
 			InternalEObject oldIn = (InternalEObject)in;
-			in = (KDMEntity)eResolveProxy(oldIn);
+			in = (AbstractCodeElement)eResolveProxy(oldIn);
 			if (in != oldIn) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodeModelPackage.CREATE__IN, oldIn, in));
@@ -80,7 +80,7 @@ public class CreateImpl extends AbstractCodeOperationImpl implements Create {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KDMEntity basicGetIn() {
+	public AbstractCodeElement basicGetIn() {
 		return in;
 	}
 
@@ -90,8 +90,8 @@ public class CreateImpl extends AbstractCodeOperationImpl implements Create {
 	 * @generated
 	 */
 	@Override
-	public void setIn(KDMEntity newIn) {
-		KDMEntity oldIn = in;
+	public void setIn(AbstractCodeElement newIn) {
+		AbstractCodeElement oldIn = in;
 		in = newIn;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CodeModelPackage.CREATE__IN, oldIn, in));
@@ -121,7 +121,7 @@ public class CreateImpl extends AbstractCodeOperationImpl implements Create {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CodeModelPackage.CREATE__IN:
-				setIn((KDMEntity)newValue);
+				setIn((AbstractCodeElement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,7 +136,7 @@ public class CreateImpl extends AbstractCodeOperationImpl implements Create {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CodeModelPackage.CREATE__IN:
-				setIn((KDMEntity)null);
+				setIn((AbstractCodeElement)null);
 				return;
 		}
 		super.eUnset(featureID);

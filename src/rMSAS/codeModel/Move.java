@@ -2,7 +2,7 @@
  */
 package rMSAS.codeModel;
 
-import kdm.core.KDMEntity;
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,12 +31,12 @@ public interface Move extends AbstractCodeOperation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(KDMEntity)
+	 * @see #setFrom(AbstractCodeElement)
 	 * @see rMSAS.codeModel.CodeModelPackage#getMove_From()
 	 * @model required="true"
 	 * @generated
 	 */
-	KDMEntity getFrom();
+	AbstractCodeElement getFrom();
 
 	/**
 	 * Sets the value of the '{@link rMSAS.codeModel.Move#getFrom <em>From</em>}' reference.
@@ -46,7 +46,7 @@ public interface Move extends AbstractCodeOperation {
 	 * @see #getFrom()
 	 * @generated
 	 */
-	void setFrom(KDMEntity value);
+	void setFrom(AbstractCodeElement value);
 
 	/**
 	 * Returns the value of the '<em><b>To</b></em>' reference.
@@ -57,12 +57,12 @@ public interface Move extends AbstractCodeOperation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' reference.
-	 * @see #setTo(KDMEntity)
+	 * @see #setTo(AbstractCodeElement)
 	 * @see rMSAS.codeModel.CodeModelPackage#getMove_To()
 	 * @model required="true"
 	 * @generated
 	 */
-	KDMEntity getTo();
+	AbstractCodeElement getTo();
 
 	/**
 	 * Sets the value of the '{@link rMSAS.codeModel.Move#getTo <em>To</em>}' reference.
@@ -72,6 +72,6 @@ public interface Move extends AbstractCodeOperation {
 	 * @see #getTo()
 	 * @generated
 	 */
-	void setTo(KDMEntity value);
+	void setTo(AbstractCodeElement value);
 
 } // Move

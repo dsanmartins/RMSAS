@@ -2,14 +2,14 @@
  */
 package rMSAS.codeModel.impl;
 
-import kdm.core.KDMEntity;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 import rMSAS.codeModel.CodeModelPackage;
 import rMSAS.codeModel.Move;
@@ -37,7 +37,7 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * @generated
 	 * @ordered
 	 */
-	protected KDMEntity from;
+	protected AbstractCodeElement from;
 
 	/**
 	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
@@ -47,7 +47,7 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * @generated
 	 * @ordered
 	 */
-	protected KDMEntity to;
+	protected AbstractCodeElement to;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,10 +74,10 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * @generated
 	 */
 	@Override
-	public KDMEntity getFrom() {
+	public AbstractCodeElement getFrom() {
 		if (from != null && from.eIsProxy()) {
 			InternalEObject oldFrom = (InternalEObject)from;
-			from = (KDMEntity)eResolveProxy(oldFrom);
+			from = (AbstractCodeElement)eResolveProxy(oldFrom);
 			if (from != oldFrom) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodeModelPackage.MOVE__FROM, oldFrom, from));
@@ -91,7 +91,7 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KDMEntity basicGetFrom() {
+	public AbstractCodeElement basicGetFrom() {
 		return from;
 	}
 
@@ -101,8 +101,8 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * @generated
 	 */
 	@Override
-	public void setFrom(KDMEntity newFrom) {
-		KDMEntity oldFrom = from;
+	public void setFrom(AbstractCodeElement newFrom) {
+		AbstractCodeElement oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CodeModelPackage.MOVE__FROM, oldFrom, from));
@@ -114,10 +114,10 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * @generated
 	 */
 	@Override
-	public KDMEntity getTo() {
+	public AbstractCodeElement getTo() {
 		if (to != null && to.eIsProxy()) {
 			InternalEObject oldTo = (InternalEObject)to;
-			to = (KDMEntity)eResolveProxy(oldTo);
+			to = (AbstractCodeElement)eResolveProxy(oldTo);
 			if (to != oldTo) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodeModelPackage.MOVE__TO, oldTo, to));
@@ -131,7 +131,7 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KDMEntity basicGetTo() {
+	public AbstractCodeElement basicGetTo() {
 		return to;
 	}
 
@@ -141,8 +141,8 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	 * @generated
 	 */
 	@Override
-	public void setTo(KDMEntity newTo) {
-		KDMEntity oldTo = to;
+	public void setTo(AbstractCodeElement newTo) {
+		AbstractCodeElement oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CodeModelPackage.MOVE__TO, oldTo, to));
@@ -175,10 +175,10 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CodeModelPackage.MOVE__FROM:
-				setFrom((KDMEntity)newValue);
+				setFrom((AbstractCodeElement)newValue);
 				return;
 			case CodeModelPackage.MOVE__TO:
-				setTo((KDMEntity)newValue);
+				setTo((AbstractCodeElement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,10 +193,10 @@ public class MoveImpl extends AbstractCodeOperationImpl implements Move {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CodeModelPackage.MOVE__FROM:
-				setFrom((KDMEntity)null);
+				setFrom((AbstractCodeElement)null);
 				return;
 			case CodeModelPackage.MOVE__TO:
-				setTo((KDMEntity)null);
+				setTo((AbstractCodeElement)null);
 				return;
 		}
 		super.eUnset(featureID);

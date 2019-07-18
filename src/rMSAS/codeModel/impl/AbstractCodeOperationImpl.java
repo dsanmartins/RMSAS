@@ -2,8 +2,6 @@
  */
 package rMSAS.codeModel.impl;
 
-import kdm.core.KDMEntity;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -11,6 +9,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 import rMSAS.codeModel.AbstractCodeOperation;
 import rMSAS.codeModel.CodeModelPackage;
@@ -71,7 +71,7 @@ public abstract class AbstractCodeOperationImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 * @ordered
 	 */
-	protected KDMEntity entity;
+	protected AbstractCodeElement entity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,10 +161,10 @@ public abstract class AbstractCodeOperationImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 */
 	@Override
-	public KDMEntity getEntity() {
+	public AbstractCodeElement getEntity() {
 		if (entity != null && entity.eIsProxy()) {
 			InternalEObject oldEntity = (InternalEObject)entity;
-			entity = (KDMEntity)eResolveProxy(oldEntity);
+			entity = (AbstractCodeElement)eResolveProxy(oldEntity);
 			if (entity != oldEntity) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodeModelPackage.ABSTRACT_CODE_OPERATION__ENTITY, oldEntity, entity));
@@ -178,7 +178,7 @@ public abstract class AbstractCodeOperationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KDMEntity basicGetEntity() {
+	public AbstractCodeElement basicGetEntity() {
 		return entity;
 	}
 
@@ -188,8 +188,8 @@ public abstract class AbstractCodeOperationImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 */
 	@Override
-	public void setEntity(KDMEntity newEntity) {
-		KDMEntity oldEntity = entity;
+	public void setEntity(AbstractCodeElement newEntity) {
+		AbstractCodeElement oldEntity = entity;
 		entity = newEntity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CodeModelPackage.ABSTRACT_CODE_OPERATION__ENTITY, oldEntity, entity));
@@ -230,7 +230,7 @@ public abstract class AbstractCodeOperationImpl extends MinimalEObjectImpl.Conta
 				setCondition((AbstractCondition)newValue);
 				return;
 			case CodeModelPackage.ABSTRACT_CODE_OPERATION__ENTITY:
-				setEntity((KDMEntity)newValue);
+				setEntity((AbstractCodeElement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -251,7 +251,7 @@ public abstract class AbstractCodeOperationImpl extends MinimalEObjectImpl.Conta
 				setCondition((AbstractCondition)null);
 				return;
 			case CodeModelPackage.ABSTRACT_CODE_OPERATION__ENTITY:
-				setEntity((KDMEntity)null);
+				setEntity((AbstractCodeElement)null);
 				return;
 		}
 		super.eUnset(featureID);

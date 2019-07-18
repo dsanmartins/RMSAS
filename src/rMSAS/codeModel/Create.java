@@ -2,7 +2,7 @@
  */
 package rMSAS.codeModel;
 
-import kdm.core.KDMEntity;
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +30,12 @@ public interface Create extends AbstractCodeOperation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>In</em>' reference.
-	 * @see #setIn(KDMEntity)
+	 * @see #setIn(AbstractCodeElement)
 	 * @see rMSAS.codeModel.CodeModelPackage#getCreate_In()
 	 * @model required="true"
 	 * @generated
 	 */
-	KDMEntity getIn();
+	AbstractCodeElement getIn();
 
 	/**
 	 * Sets the value of the '{@link rMSAS.codeModel.Create#getIn <em>In</em>}' reference.
@@ -45,6 +45,6 @@ public interface Create extends AbstractCodeOperation {
 	 * @see #getIn()
 	 * @generated
 	 */
-	void setIn(KDMEntity value);
+	void setIn(AbstractCodeElement value);
 
 } // Create

@@ -2,7 +2,7 @@
  */
 package rMSAS.codeModel;
 
-import kdm.core.KDMEntity;
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +30,12 @@ public interface Delete extends AbstractCodeOperation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(KDMEntity)
+	 * @see #setFrom(AbstractCodeElement)
 	 * @see rMSAS.codeModel.CodeModelPackage#getDelete_From()
 	 * @model required="true"
 	 * @generated
 	 */
-	KDMEntity getFrom();
+	AbstractCodeElement getFrom();
 
 	/**
 	 * Sets the value of the '{@link rMSAS.codeModel.Delete#getFrom <em>From</em>}' reference.
@@ -45,6 +45,6 @@ public interface Delete extends AbstractCodeOperation {
 	 * @see #getFrom()
 	 * @generated
 	 */
-	void setFrom(KDMEntity value);
+	void setFrom(AbstractCodeElement value);
 
 } // Delete

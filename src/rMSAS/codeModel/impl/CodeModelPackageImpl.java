@@ -2,60 +2,36 @@
  */
 package rMSAS.codeModel.impl;
 
-import kdm.action.ActionPackage;
-
-import kdm.action.impl.ActionPackageImpl;
-
-import kdm.build.BuildPackage;
-
-import kdm.build.impl.BuildPackageImpl;
-
-import kdm.code.CodePackage;
-
-import kdm.code.impl.CodePackageImpl;
-
-import kdm.conceptual.ConceptualPackage;
-
-import kdm.conceptual.impl.ConceptualPackageImpl;
-
-import kdm.core.CorePackage;
-
-import kdm.core.impl.CorePackageImpl;
-
-import kdm.data.DataPackage;
-
-import kdm.data.impl.DataPackageImpl;
-
-import kdm.event.EventPackage;
-
-import kdm.event.impl.EventPackageImpl;
-
-import kdm.kdm.KdmPackage;
-
-import kdm.kdm.impl.KdmPackageImpl;
-
-import kdm.platform.PlatformPackage;
-
-import kdm.platform.impl.PlatformPackageImpl;
-
-import kdm.source.SourcePackage;
-
-import kdm.source.impl.SourcePackageImpl;
-
-import kdm.structure.StructurePackage;
-
-import kdm.structure.impl.StructurePackageImpl;
-
-import kdm.ui.UiPackage;
-
-import kdm.ui.impl.UiPackageImpl;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.gmt.modisco.omg.kdm.action.ActionPackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.build.BuildPackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.code.CodePackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.conceptual.ConceptualPackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.core.CorePackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.data.DataPackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.event.EventPackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.kdm.KdmPackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.platform.PlatformPackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.source.SourcePackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.structure.StructurePackage;
+
+import org.eclipse.gmt.modisco.omg.kdm.ui.UiPackage;
 
 import rMSAS.architecturalModel.ArchitecturalModelPackage;
 
@@ -154,67 +130,33 @@ public class CodeModelPackageImpl extends EPackageImpl implements CodeModelPacka
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		CorePackage.eINSTANCE.eClass();
+		KdmPackage.eINSTANCE.eClass();
+		SourcePackage.eINSTANCE.eClass();
+		CodePackage.eINSTANCE.eClass();
+		ActionPackage.eINSTANCE.eClass();
+		PlatformPackage.eINSTANCE.eClass();
+		BuildPackage.eINSTANCE.eClass();
+		ConceptualPackage.eINSTANCE.eClass();
+		DataPackage.eINSTANCE.eClass();
+		EventPackage.eINSTANCE.eClass();
+		StructurePackage.eINSTANCE.eClass();
+		UiPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
-		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KdmPackage.eNS_URI);
-		KdmPackageImpl theKdmPackage = (KdmPackageImpl)(registeredPackage instanceof KdmPackageImpl ? registeredPackage : KdmPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SourcePackage.eNS_URI);
-		SourcePackageImpl theSourcePackage = (SourcePackageImpl)(registeredPackage instanceof SourcePackageImpl ? registeredPackage : SourcePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodePackage.eNS_URI);
-		CodePackageImpl theCodePackage = (CodePackageImpl)(registeredPackage instanceof CodePackageImpl ? registeredPackage : CodePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ActionPackage.eNS_URI);
-		ActionPackageImpl theActionPackage = (ActionPackageImpl)(registeredPackage instanceof ActionPackageImpl ? registeredPackage : ActionPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlatformPackage.eNS_URI);
-		PlatformPackageImpl thePlatformPackage = (PlatformPackageImpl)(registeredPackage instanceof PlatformPackageImpl ? registeredPackage : PlatformPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BuildPackage.eNS_URI);
-		BuildPackageImpl theBuildPackage = (BuildPackageImpl)(registeredPackage instanceof BuildPackageImpl ? registeredPackage : BuildPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptualPackage.eNS_URI);
-		ConceptualPackageImpl theConceptualPackage = (ConceptualPackageImpl)(registeredPackage instanceof ConceptualPackageImpl ? registeredPackage : ConceptualPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
-		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(EventPackage.eNS_URI);
-		EventPackageImpl theEventPackage = (EventPackageImpl)(registeredPackage instanceof EventPackageImpl ? registeredPackage : EventPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(StructurePackage.eNS_URI);
-		StructurePackageImpl theStructurePackage = (StructurePackageImpl)(registeredPackage instanceof StructurePackageImpl ? registeredPackage : StructurePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI);
-		UiPackageImpl theUiPackage = (UiPackageImpl)(registeredPackage instanceof UiPackageImpl ? registeredPackage : UiPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArchitecturalModelPackage.eNS_URI);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArchitecturalModelPackage.eNS_URI);
 		ArchitecturalModelPackageImpl theArchitecturalModelPackage = (ArchitecturalModelPackageImpl)(registeredPackage instanceof ArchitecturalModelPackageImpl ? registeredPackage : ArchitecturalModelPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
 		ConstraintModelPackageImpl theConstraintModelPackage = (ConstraintModelPackageImpl)(registeredPackage instanceof ConstraintModelPackageImpl ? registeredPackage : ConstraintModelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCodeModelPackage.createPackageContents();
-		theCorePackage.createPackageContents();
-		theKdmPackage.createPackageContents();
-		theSourcePackage.createPackageContents();
-		theCodePackage.createPackageContents();
-		theActionPackage.createPackageContents();
-		thePlatformPackage.createPackageContents();
-		theBuildPackage.createPackageContents();
-		theConceptualPackage.createPackageContents();
-		theDataPackage.createPackageContents();
-		theEventPackage.createPackageContents();
-		theStructurePackage.createPackageContents();
-		theUiPackage.createPackageContents();
 		theArchitecturalModelPackage.createPackageContents();
 		theConstraintModelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCodeModelPackage.initializePackageContents();
-		theCorePackage.initializePackageContents();
-		theKdmPackage.initializePackageContents();
-		theSourcePackage.initializePackageContents();
-		theCodePackage.initializePackageContents();
-		theActionPackage.initializePackageContents();
-		thePlatformPackage.initializePackageContents();
-		theBuildPackage.initializePackageContents();
-		theConceptualPackage.initializePackageContents();
-		theDataPackage.initializePackageContents();
-		theEventPackage.initializePackageContents();
-		theStructurePackage.initializePackageContents();
-		theUiPackage.initializePackageContents();
 		theArchitecturalModelPackage.initializePackageContents();
 		theConstraintModelPackage.initializePackageContents();
 
@@ -406,7 +348,7 @@ public class CodeModelPackageImpl extends EPackageImpl implements CodeModelPacka
 
 		// Obtain other dependent packages
 		ConstraintModelPackage theConstraintModelPackage = (ConstraintModelPackage)EPackage.Registry.INSTANCE.getEPackage(ConstraintModelPackage.eNS_URI);
-		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CodePackage theCodePackage = (CodePackage)EPackage.Registry.INSTANCE.getEPackage(CodePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -421,17 +363,17 @@ public class CodeModelPackageImpl extends EPackageImpl implements CodeModelPacka
 		initEClass(abstractCodeOperationEClass, AbstractCodeOperation.class, "AbstractCodeOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractCodeOperation_Description(), ecorePackage.getEString(), "description", null, 0, 1, AbstractCodeOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractCodeOperation_Condition(), theConstraintModelPackage.getAbstractCondition(), null, "condition", null, 0, 1, AbstractCodeOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractCodeOperation_Entity(), theCorePackage.getKDMEntity(), null, "entity", null, 1, 1, AbstractCodeOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractCodeOperation_Entity(), theCodePackage.getAbstractCodeElement(), null, "entity", null, 1, 1, AbstractCodeOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moveEClass, Move.class, "Move", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMove_From(), theCorePackage.getKDMEntity(), null, "from", null, 1, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMove_To(), theCorePackage.getKDMEntity(), null, "to", null, 1, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMove_From(), theCodePackage.getAbstractCodeElement(), null, "from", null, 1, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMove_To(), theCodePackage.getAbstractCodeElement(), null, "to", null, 1, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(createEClass, Create.class, "Create", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCreate_In(), theCorePackage.getKDMEntity(), null, "in", null, 1, 1, Create.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCreate_In(), theCodePackage.getAbstractCodeElement(), null, "in", null, 1, 1, Create.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deleteEClass, Delete.class, "Delete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDelete_From(), theCorePackage.getKDMEntity(), null, "from", null, 1, 1, Delete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDelete_From(), theCodePackage.getAbstractCodeElement(), null, "from", null, 1, 1, Delete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

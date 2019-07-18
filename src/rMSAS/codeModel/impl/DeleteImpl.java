@@ -2,14 +2,14 @@
  */
 package rMSAS.codeModel.impl;
 
-import kdm.core.KDMEntity;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 import rMSAS.codeModel.CodeModelPackage;
 import rMSAS.codeModel.Delete;
@@ -36,7 +36,7 @@ public class DeleteImpl extends AbstractCodeOperationImpl implements Delete {
 	 * @generated
 	 * @ordered
 	 */
-	protected KDMEntity from;
+	protected AbstractCodeElement from;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,10 +63,10 @@ public class DeleteImpl extends AbstractCodeOperationImpl implements Delete {
 	 * @generated
 	 */
 	@Override
-	public KDMEntity getFrom() {
+	public AbstractCodeElement getFrom() {
 		if (from != null && from.eIsProxy()) {
 			InternalEObject oldFrom = (InternalEObject)from;
-			from = (KDMEntity)eResolveProxy(oldFrom);
+			from = (AbstractCodeElement)eResolveProxy(oldFrom);
 			if (from != oldFrom) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CodeModelPackage.DELETE__FROM, oldFrom, from));
@@ -80,7 +80,7 @@ public class DeleteImpl extends AbstractCodeOperationImpl implements Delete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KDMEntity basicGetFrom() {
+	public AbstractCodeElement basicGetFrom() {
 		return from;
 	}
 
@@ -90,8 +90,8 @@ public class DeleteImpl extends AbstractCodeOperationImpl implements Delete {
 	 * @generated
 	 */
 	@Override
-	public void setFrom(KDMEntity newFrom) {
-		KDMEntity oldFrom = from;
+	public void setFrom(AbstractCodeElement newFrom) {
+		AbstractCodeElement oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CodeModelPackage.DELETE__FROM, oldFrom, from));
@@ -121,7 +121,7 @@ public class DeleteImpl extends AbstractCodeOperationImpl implements Delete {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CodeModelPackage.DELETE__FROM:
-				setFrom((KDMEntity)newValue);
+				setFrom((AbstractCodeElement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,7 +136,7 @@ public class DeleteImpl extends AbstractCodeOperationImpl implements Delete {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CodeModelPackage.DELETE__FROM:
-				setFrom((KDMEntity)null);
+				setFrom((AbstractCodeElement)null);
 				return;
 		}
 		super.eUnset(featureID);

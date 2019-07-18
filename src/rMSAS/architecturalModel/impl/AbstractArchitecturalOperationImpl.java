@@ -4,8 +4,6 @@ package rMSAS.architecturalModel.impl;
 
 import java.util.Collection;
 
-import kdm.structure.AbstractStructureElement;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -19,6 +17,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
 
 import rMSAS.architecturalModel.AbstractArchitecturalOperation;
 import rMSAS.architecturalModel.ArchitecturalModelPackage;

@@ -2,9 +2,9 @@
  */
 package rMSAS.codeModel;
 
-import kdm.core.KDMEntity;
-
 import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 
 import rMSAS.constraintModel.AbstractCondition;
 
@@ -88,12 +88,12 @@ public interface AbstractCodeOperation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' reference.
-	 * @see #setEntity(KDMEntity)
+	 * @see #setEntity(AbstractCodeElement)
 	 * @see rMSAS.codeModel.CodeModelPackage#getAbstractCodeOperation_Entity()
 	 * @model required="true"
 	 * @generated
 	 */
-	KDMEntity getEntity();
+	AbstractCodeElement getEntity();
 
 	/**
 	 * Sets the value of the '{@link rMSAS.codeModel.AbstractCodeOperation#getEntity <em>Entity</em>}' reference.
@@ -103,6 +103,6 @@ public interface AbstractCodeOperation extends EObject {
 	 * @see #getEntity()
 	 * @generated
 	 */
-	void setEntity(KDMEntity value);
+	void setEntity(AbstractCodeElement value);
 
 } // AbstractCodeOperation

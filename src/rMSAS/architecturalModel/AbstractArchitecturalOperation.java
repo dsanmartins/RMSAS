@@ -2,11 +2,11 @@
  */
 package rMSAS.architecturalModel;
 
-import kdm.structure.AbstractStructureElement;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
 
 import rMSAS.codeModel.AbstractCodeOperation;
 
