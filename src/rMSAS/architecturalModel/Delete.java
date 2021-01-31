@@ -2,7 +2,7 @@
  */
 package rMSAS.architecturalModel;
 
-import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
+import org.eclipse.modisco.omg.kdm.structure.AbstractStructureElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,6 @@ public interface Delete extends AbstractArchitecturalOperation {
 	/**
 	 * Returns the value of the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>From</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(AbstractStructureElement)

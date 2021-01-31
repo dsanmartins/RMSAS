@@ -4,7 +4,7 @@ package rMSAS.codeModel;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
+import org.eclipse.modisco.omg.kdm.code.AbstractCodeElement;
 
 import rMSAS.constraintModel.AbstractCondition;
 
@@ -30,10 +30,6 @@ public interface AbstractCodeOperation extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
@@ -56,10 +52,6 @@ public interface AbstractCodeOperation extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Condition</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Condition</em>' reference.
 	 * @see #setCondition(AbstractCondition)
@@ -82,10 +74,6 @@ public interface AbstractCodeOperation extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Entity</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' reference.
 	 * @see #setEntity(AbstractCodeElement)

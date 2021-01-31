@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
+import org.eclipse.modisco.omg.kdm.structure.AbstractStructureElement;
 
 import rMSAS.architecturalModel.AbstractArchitecturalOperation;
 import rMSAS.architecturalModel.ArchitecturalModelPackage;

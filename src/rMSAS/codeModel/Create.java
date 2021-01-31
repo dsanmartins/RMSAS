@@ -2,7 +2,7 @@
  */
 package rMSAS.codeModel;
 
-import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
+import org.eclipse.modisco.omg.kdm.code.AbstractCodeElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,6 @@ public interface Create extends AbstractCodeOperation {
 	/**
 	 * Returns the value of the '<em><b>In</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>In</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>In</em>' reference.
 	 * @see #setIn(AbstractCodeElement)

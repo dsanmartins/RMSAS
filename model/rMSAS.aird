@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_AfcY0JbsEem_UKZAaNX16g" selectedViews="_AhC7UJbsEem_UKZAaNX16g _5YkCYJe_EemUt7_v7UAQPA _5YslQJe_EemUt7_v7UAQPA _5ZXToJe_EemUt7_v7UAQPA" version="14.1.0.201810161215">
+  <viewpoint:DAnalysis uid="_AfcY0JbsEem_UKZAaNX16g" selectedViews="_AhC7UJbsEem_UKZAaNX16g _5YkCYJe_EemUt7_v7UAQPA _5YslQJe_EemUt7_v7UAQPA _5ZXToJe_EemUt7_v7UAQPA" version="14.3.0.201909031200">
     <semanticResources>../plugin.xml</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
-    <semanticResources>rMSAS.genmodel</semanticResources>
     <semanticResources>platform:/resource/org.eclipse.gmt.modisco.omg.kdm/model/kdm.genmodel</semanticResources>
     <semanticResources>rMSAS.ecore</semanticResources>
     <semanticResources>platform:/resource/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.modisco.omg.kdm/model/kdm.ecore</semanticResources>
+    <semanticResources>rMSAS.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.modisco.omg.kdm/model/kdm.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_AhC7UJbsEem_UKZAaNX16g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AkwWoJbsEem_UKZAaNX16g" name="rMSAS" repPath="#_Ahve4JbsEem_UKZAaNX16g">
@@ -24,7 +26,7 @@
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']"/>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram uid="_Ahve4JbsEem_UKZAaNX16g" name="rMSAS">
+  <diagram:DSemanticDiagram uid="_Ahve4JbsEem_UKZAaNX16g">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_AktTUJbsEem_UKZAaNX16g" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_AktTUZbsEem_UKZAaNX16g">
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_uM4_wJbxEem_UKZAaNX16g" sourceArrow="FillDiamond" routingStyle="manhattan">
